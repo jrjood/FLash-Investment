@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/navicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>Flash Investment</title>
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=AYkNyk54dSd6oJdYIn7W4_IxIrqKLebFTgYM8wOgqJ4OMCckK9iW1BM4ljTFGQ7r2RYrX_zLmfc8pHIpOHhBweSaz-eUhgz4GnG6mUPKGPNHRGN7VLk9K8gqF7hFLTWHpSeE02Nu_sp7lXTMOnUDO9tuGrFQ7PGb19VihLA5o5iNtzeV2vs98wXldKHIqZlD1-wrV0MXjrzJoNBTe-w5pogTnJ07hRZLTH8WgbYW0vuRysXLKXZV32XFrYHwsfA1nQIJoGD2GTOqIxD5HATf2A"
+      charset="UTF-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNzAxNDQxMzA4NDgwMjQxNzg0LzE0MTMxODg4NTk1OTU4NDk3NTgvaW5kZXguaHRtbD9leD02OGJiMDYyZiZpcz02OGI5YjRhZiZobT1iNDgxMTUxYWI3YmZjNTYxY2E4NzUyNDYxOTAzZjFmMjJmZTg5ZDQ5YTA5NWY5ZjdkODQyNzRiMzc0MjYxYmY3Jg"
+    />
+  </head>
+  <body>
+    <div id="initial-loader">
+      <style>
+        #initial-loader {
+          position: fixed;
+          inset: 0;
+          background: #050505;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          z-index: 9999;
+        }
+
+        #initial-loader .logo {
+          width: 30rem;
+          opacity: 0;
+          transform: translateY(-10rem);
+          animation: fadeSlideIn 1s ease forwards;
+        }
+
+        #initial-loader .spinner {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border: 5px solid #ccc;
+          border-top-color: #333;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin-top: 1.5rem;
+        }
+
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes fadeSlideIn {
+          to {
+            opacity: 1;
+            transform: translateY(-8rem);
+          }
+        }
+      </style>
+
+      <!-- Optional: add your logo image instead of React component -->
+      <img class="logo" src="/logo.png" alt="Logo" />
+      <div class="spinner"></div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
