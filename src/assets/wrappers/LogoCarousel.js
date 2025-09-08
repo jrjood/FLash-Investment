@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  background-color: var(--primary-100);
+  background-color: var(--primary-300);
   .carousel-container {
     flex-direction: column;
     /* gap: 2rem; */

@@ -72,13 +72,14 @@ button {
   --primary-50: #fdfcf7; /* almost white */
   --primary-100: #faf8ef; /* very light cream */
   --primary-200: #f7f3db; /* base soft beige */
-  --primary-300: #f1ebc5; /* warm light sand */
+  --primary-300: #faf8ef; /* warm light sand */
   --primary-400: #e7e1ad; /* muted pale gold */
   --primary-500: #d8d28f; /* golden beige */
   --primary-600: #c0b877; /* earthy sand */
   --primary-700: #a79f61; /* muted olive beige */
   --primary-800: #8a824b; /* earthy taupe */
   --primary-900: #5d5530; /* deep brown-olive */
+  --main-green: #0e281b;
 
   /* grey */
   --grey-50: #f9fafb;
@@ -92,7 +93,7 @@ button {
   --grey-800: #1f2937;
   --grey-900: #111827;
   /* rest of the colors */
-  --black: #0e281b;
+  --black: #050505;
   --white: #f7f7f7;
   --red-light: #f8d7da;
   --red-dark: #842029;
@@ -210,7 +211,7 @@ ul {
 /* buttons */
 
 .btn {
-  background-color: var(--primary-400);
+  background-color: #f1ebc5;
   border: none;
   padding: 0.45rem 2rem;
   width: fit-content;

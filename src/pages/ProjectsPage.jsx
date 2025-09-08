@@ -11,7 +11,7 @@ const ProjectsPage = () => {
     <>
       <PageStarter title='projects' imgPath={bgImage} />
       <AllProjectsSection />
-      <InspirationSection quote='ELEVATING POSSIBILITIES' />
+      <InspirationSection quote='ELEVATING LIVING STANDARDS' />
     </>
   );
 };

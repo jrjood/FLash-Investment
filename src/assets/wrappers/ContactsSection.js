@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  background: var(--black);
+  background: var(--main-green);
   color: var(--white);
   /* height: 15rem; */
   padding: 2rem;
@@ -25,7 +25,7 @@ const Wrapper = styled.section`
   .contact-circle {
     width: 5rem;
     height: 5rem;
-    background: var(--primary-100);
+    background: var(--primary-300);
     border-radius: 50%;
     display: flex;
     color: var(--black);

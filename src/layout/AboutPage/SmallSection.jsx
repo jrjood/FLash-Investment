@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  background-color: var(--primary-100);
+  background-color: var(--primary-300);
   width: 100%;
   height: fit-content;
   display: flex;
@@ -25,7 +25,7 @@ const Wrapper = styled.section`
 const SmallSection = () => {
   return (
     <Wrapper>
-      <h3>EMPOWERING INNOVATIONS</h3>
+      <h3>SHAPING TOMORROW’S COMMUNITIES</h3>
     </Wrapper>
   );
 };

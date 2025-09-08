@@ -7,31 +7,31 @@ import proj5 from '../assets/images/projectsImages/proj5.jpg';
 const projects = [
   {
     img: proj1,
-    text: 'BISKREM-2024 - الحلو بيكمل أحلى',
+    text: 'Project 1',
     category: 'pos-marketing',
     link: '/projects/proj1',
   },
   {
     img: proj2,
-    text: 'NISSAN-DARING AFRICA-2024',
+    text: 'Project 2',
     category: 'stunts',
     link: '/projects/proj2',
   },
   {
     img: proj3,
-    text: 'PEPSI-THE HOUSE OF FIZZ-2023',
+    text: 'Project 3',
     category: 'activation',
     link: '/projects/proj3',
   },
   {
     img: proj4,
-    text: 'BRITISH PETROLEUM - LAUNCH EVENT',
+    text: 'Project 4',
     category: 'events',
     link: '/projects/proj4',
   },
   {
     img: proj5,
-    text: 'TOTAL ENERGIES - YLT FINAL',
+    text: 'Project 5',
     category: 'team-building',
     link: '/projects/proj5',
   },

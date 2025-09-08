@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  background: var(--primary-100);
+  background: var(--primary-300);
   text-align: center;
   padding: 2rem 5rem;
 
@@ -62,7 +62,7 @@ const Wrapper = styled.section`
   }
 
   .pagination .active {
-    background: var(--primary-400) !important;
+    background: var(--primary-600) !important;
   }
   .pagination span:active {
     transform: scale(0.95);

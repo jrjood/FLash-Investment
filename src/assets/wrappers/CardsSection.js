@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  background-color: var(--primary-100);
+  background-color: #050505;
   color: var(--white);
   text-align: left;
+  padding-bottom: 1rem;
 
   .container {
     display: flex;
@@ -12,8 +13,9 @@ const Wrapper = styled.section`
     margin: 0 auto;
     position: relative;
   }
+
   .title {
-    color: #050505;
+    color: var(--white);
   }
   .grid {
     display: grid;
@@ -67,8 +69,8 @@ const Wrapper = styled.section`
     }
 
     &:hover .label {
-      background: #090505;
-      color: var(--white);
+      background: var(--primary-600);
+      /* color: var(--white); */
     }
     &:hover .img {
       transform: scale(1.1);
@@ -103,10 +105,10 @@ const Wrapper = styled.section`
     left: 0;
     width: 90%;
     height: 2.5rem;
-    background: var(--black);
+    background: var(--primary-300);
     padding: 0.5rem 1rem;
     font-weight: bold;
-    color: var(--white);
+    color: var(--black);
     font-size: 1rem;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     text-transform: uppercase;
@@ -114,12 +116,17 @@ const Wrapper = styled.section`
   }
   .btn {
     &:hover {
-      border-color: var(--black);
-      color: var(--black);
+      border-color: var(--primary-300);
+      color: var(--primary-300);
     }
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .btn-container {
     align-self: flex-end;
+    align-self: center;
+    justify-self: center;
   }
   .category-select {
     background-color: var(--white);

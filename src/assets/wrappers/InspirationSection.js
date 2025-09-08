@@ -8,9 +8,9 @@ const Wrapper = styled.section`
   align-items: center;
   background-image: url(${bgImage});
   background-repeat: no-repeat;
-  background-color: var(--primary-100);
+  background-color: var(--primary-300);
   background-position-x: 98%;
-  border-top: 40px var(--black) solid;
+  /* border-top: 40px var(--black) solid; */
 
   .container {
     margin: 0 5rem;
@@ -58,7 +58,7 @@ const Wrapper = styled.section`
 
   //NewsletterForm style
   .newsletter-title {
-    color: var(--white);
+    color: var(--black);
     font-family: 'Rama Gothic M';
     font-size: 2.5rem;
     font-weight: bold;
@@ -130,13 +130,13 @@ const Wrapper = styled.section`
       background-color: rgba(0, 0, 0, 0.4);
     }
     .facebook {
-      background-color: #1877f2;
+      background-color: #1255adff;
     }
     .whatsapp {
-      background-color: #25d366;
+      background-color: #1b9548ff;
     }
     .instagram {
-      background-color: #ee2a7b;
+      background-color: #b11f5cff;
     }
   }
 

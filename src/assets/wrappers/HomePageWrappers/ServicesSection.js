@@ -3,13 +3,18 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   position: relative;
-  background-color: var(--black);
+  background-color: #050505;
   text-align: center;
 
   .container {
     position: relative;
     z-index: 2;
     padding-block: 2rem 3rem;
+    padding-top: 0;
+  }
+
+  .section-container {
+    padding: 2rem 2rem;
   }
 
   .title {
@@ -36,7 +41,8 @@ const Wrapper = styled.section`
     min-height: 9rem;
     width: 100%;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.82);
+    /* background: rgba(255, 255, 255, 0.82); */
+    background-color: var(--primary-300);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);

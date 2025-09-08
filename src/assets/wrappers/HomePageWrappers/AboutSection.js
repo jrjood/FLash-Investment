@@ -46,7 +46,7 @@ const Wrapper = styled.section`
   .highlight {
     font-size: 1.7rem;
     color: var(--primary-400);
-    font-family: 'Rama Gothic M';
+    /* font-family: 'Rama Gothic M'; */
     margin-bottom: 2.5rem;
   }
   @media (max-width: 48rem) {

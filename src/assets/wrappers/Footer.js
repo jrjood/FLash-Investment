@@ -5,7 +5,7 @@ const Wrapper = styled.footer`
   align-items: center;
   padding: 1rem 4rem;
   justify-content: space-between;
-  background-color: var(--black);
+  background-color: var(--main-green);
   /* padding-bottom: 4rem; */
   border-top: 0.1px solid rgba(255, 255, 255, 0.23);
   .social-container {

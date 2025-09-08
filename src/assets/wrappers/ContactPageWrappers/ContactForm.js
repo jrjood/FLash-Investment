@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  background-color: var(--black);
+  background-color: var(--main-green);
   padding: 3.75rem 2.5rem;
   color: var(--white);
   display: flex;

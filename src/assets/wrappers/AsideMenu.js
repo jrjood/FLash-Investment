@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
 const AsideMenu = styled.aside`
-  /* default: hidden */
   display: none;
 
-  /* on small screens: show as a slide-in overlay */
   @media (max-width: 48rem) {
     display: flex;
   }
 
   position: fixed;
-  inset: 0px;
+  inset: 0;
 
   background-color: var(--black);
   color: var(--white);
@@ -18,7 +16,7 @@ const AsideMenu = styled.aside`
   align-items: center;
   flex-direction: column;
   transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
-  transform: translateX(${({ $open }) => ($open ? '0px' : '-100%')});
+  transform: translateX(${({ $open }) => ($open ? '0' : '-100%')});
   opacity: ${({ $open }) => ($open ? '1' : '0')};
   pointer-events: ${({ $open }) => ($open ? 'auto' : 'none')};
 
@@ -46,14 +44,12 @@ const AsideMenu = styled.aside`
     transition: var(--transition);
   }
 
-  li {
-    .active {
-      color: var(--primary-700);
-    }
+  li .active {
+    color: var(--primary-700);
   }
-
   span {
     display: none;
   }
 `;
+
 export default AsideMenu;
