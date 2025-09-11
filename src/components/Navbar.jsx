@@ -3,7 +3,12 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai';
 import { IoIosMenu } from 'react-icons/io';
-
+import {
+  FaFacebookF,
+  FaWhatsapp,
+  FaInstagram,
+  FaLinkedin,
+} from 'react-icons/fa';
 import { Logo, NavLinks } from '.';
 import Wrapper from '../assets/wrappers/Navbar';
 import MenuButtonWrapper from '../assets/wrappers/MenuButtonWrapper';
@@ -37,7 +42,7 @@ const NavBar = () => {
       },
       {
         root: null,
-        threshold: 0.2,
+        threshold: 0.7,
         rootMargin: '0px',
       }
     );
@@ -84,6 +89,48 @@ const NavBar = () => {
           <NavLinks toggle={toggleSideBar} />
         </div>
       </AsideMenu>
+      <div className='test'>
+        <div className='test2'>
+          <div className='social-container'>
+            <div className='social-icons'>
+              <a
+                target='_blank'
+                className='facebook'
+                href='https://www.facebook.com/p/Flash-investment-61559102775358/'
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                target='_blank'
+                className='whatsapp'
+                href='https://api.whatsapp.com/send?phone=%2B201118883882&context=AfdU1Gbx80Rb5EBFtcc1WIaGQngzVqllH80wE9tNruDRPdQp8A5xgU9YrmIIr95RDt20G-BumoaH5J1yjhsCfoGwifkhkfb3pTR-idgh8xgXOZUQsq6ns2zSHmcPMbt3LXD1ap0ZCZculE5tUldZkTAv5A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExSE1OZmd1cVh6YjJjWHhUNwEe0gdTAAKTmGdviMnEgCNyNaHua0iLGiKzghtdXeaGNJKILDQlxhLl9loQF0I_aem_bYn6wvZx2jU5JfKPdtKgCA'
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                target='_blank'
+                className='instagram'
+                href='https://www.instagram.com/flash.investment/'
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                target='_blank'
+                className='linkedin'
+                href='https://www.linkedin.com/company/108218609/admin/dashboard/'
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+          <div className='line'></div>
+          <Link>News & Guides</Link>
+        </div>
+        <div>
+          <Link>Call Us</Link>
+        </div>
+      </div>
       <nav className='navbar '>
         <MenuButtonWrapper
           type='button'

@@ -116,8 +116,8 @@ const Wrapper = styled.section`
   }
   .btn {
     &:hover {
-      border-color: var(--primary-300);
-      color: var(--primary-300);
+      border-color: var(--primary-400);
+      color: var(--primary-400);
     }
 
     padding-top: 1.5rem;

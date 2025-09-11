@@ -9,7 +9,19 @@ const Wrapper = styled.nav`
   z-index: 10;
   background: transparent;
   box-shadow: none;
-
+  .test {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    .test2 {
+      display: flex;
+    }
+    .line {
+      height: 1rem;
+      width: 0.5rem;
+      background-color: black;
+    }
+  }
   .navbar {
     display: flex;
     align-items: center;
@@ -59,7 +71,7 @@ const Wrapper = styled.nav`
       }
       .nav-link {
         color: ${({ $isSticky }) =>
-          $isSticky ? 'var(--primary-900)' : 'var(--primary-300)'};
+          $isSticky ? 'var(--primary-900)' : 'var(--primary-400)'};
       }
     }
   }
