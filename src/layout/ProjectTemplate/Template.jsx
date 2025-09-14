@@ -1,9 +1,10 @@
-import { ImageSlider, TagList } from '../../components';
+import { ImageSlider, TagList, PageStarter } from '../../components';
 import Wrapper from '../../assets/wrappers/ProjectTemplate';
 
 const Template = ({ images, tags, desc }) => {
   return (
     <Wrapper>
+      <PageStarter />
       <TagList tags={tags} />
       <ImageSlider images={images} />
 

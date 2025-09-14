@@ -69,7 +69,7 @@ const Wrapper = styled.section`
     }
 
     &:hover .label {
-      background: var(--primary-600);
+      background: var(--primary-200);
       /* color: var(--white); */
     }
     &:hover .img {
@@ -120,8 +120,8 @@ const Wrapper = styled.section`
       color: var(--primary-400);
     }
 
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .btn-container {
     align-self: flex-end;

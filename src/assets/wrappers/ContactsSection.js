@@ -12,7 +12,7 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr 0.1fr 1fr 0.1fr 1fr;
     /* transform: translateY(-8rem); */
-    font-family: 'Proxima-Nova', sans-serif;
+    /* font-family: 'Proxima-Nova', sans-serif; */
     font-weight: 600;
   }
   .contact-item {
@@ -41,12 +41,12 @@ const Wrapper = styled.section`
   }
   .label {
     /* margin: 0.5rem 0; */
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
   .info {
     color: #00aaff;
     /* min-height: 8rem; */
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
     &:hover {
       color: #0075af;

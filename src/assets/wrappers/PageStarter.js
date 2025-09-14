@@ -27,11 +27,11 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Rama Gothic M';
+    /* font-family: 'Rama Gothic M'; */
     font-weight: bold;
     color: var(--primary-400);
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
   }
 

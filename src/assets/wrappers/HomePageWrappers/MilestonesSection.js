@@ -58,13 +58,14 @@ const Wrapper = styled.section`
       font-weight: bold;
       color: #a9a9a9;
       display: flex;
+      font-family: 'Roboto';
       /* margin-top: 0.5rem; */
     }
   }
   .since {
     display: none;
     font-size: 5rem;
-    font-family: 'Proxima-Nova', sans-serif;
+    /* font-family: 'Proxima-Nova', sans-serif; */
     font-weight: bold;
     font-weight: 500;
     color: var(--primary-400);

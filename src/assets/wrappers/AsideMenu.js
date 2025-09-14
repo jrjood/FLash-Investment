@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const AsideMenu = styled.aside`
   display: none;
+  z-index: 1;
 
   @media (max-width: 48rem) {
     display: flex;

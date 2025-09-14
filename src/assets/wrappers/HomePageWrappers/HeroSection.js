@@ -57,8 +57,9 @@ const Wrapper = styled.section`
     justify-content: center;
 
     p {
+      font-weight: 500;
       max-width: 33rem;
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       line-height: 1.6;
       margin-bottom: 2rem;
 

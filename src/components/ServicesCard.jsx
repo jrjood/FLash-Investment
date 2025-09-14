@@ -37,7 +37,7 @@ const ServicesCard = ({ services }) => {
       {services.map((service, index) => {
         const label = service.replace(/_/g, ' ');
         return (
-          <button
+          <div
             type='button'
             onClick={() => handleClick(service)}
             className='card'
@@ -49,7 +49,7 @@ const ServicesCard = ({ services }) => {
             <div className='card-icon'>{icons[service]}</div>
             <span className='line-highlight' aria-hidden />
             <span className='card-title'>{label}</span>
-          </button>
+          </div>
         );
       })}
 

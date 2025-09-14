@@ -1,8 +1,11 @@
 import heroVideo from '../../assets/images/backgrounds/HomePageImages/hero-bg.mp4';
 import Wrapper from '../../assets/wrappers/HomePageWrappers/HeroSection';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper id='hero' className='section-container'>
       <div>
@@ -22,7 +25,7 @@ const HeroSection = () => {
       <div className='content '>
         <div className='left flex-center'>
           <div className='info'>
-            <p>WHERE</p>
+            <p>{t('welcome')}</p>
             <p>SPEED</p>
             <p>MEETS</p>
             <p>SUCCESS</p>

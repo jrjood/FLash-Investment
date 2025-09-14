@@ -9,24 +9,33 @@ const Wrapper = styled.nav`
   z-index: 10;
   background: transparent;
   box-shadow: none;
+
   .test {
-    background-color: white;
     display: flex;
+    flex-direction: row;
+    gap: 1rem;
     justify-content: space-between;
-    .test2 {
-      display: flex;
+    align-items: center;
+    /* color: var(--white); */
+    font-weight: 100;
+    a {
+      font-weight: 350;
+      /* color: var(--white); */
     }
+
     .line {
-      height: 1rem;
-      width: 0.5rem;
-      background-color: black;
+      height: 1.5rem;
+      width: 0.05rem;
+      background-color: ${({ $isSticky }) =>
+        $isSticky ? '#050505' : 'var(--white)'};
     }
   }
+
   .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
+    gap: 7rem;
     width: 100%;
     height: 100%;
     padding: 0 4rem;
@@ -50,19 +59,27 @@ const Wrapper = styled.nav`
   .logo-container {
     padding-left: 1rem;
   }
+  .logo1 {
+    display: ${({ $isSticky }) => ($isSticky ? 'none' : 'block')};
+  }
+  .logo2 {
+    display: ${({ $isSticky }) => ($isSticky ? 'block' : 'none')};
+  }
 
   .logo {
     transition: var(--transition);
-    width: ${({ $isSticky }) => ($isSticky ? '6rem' : '11rem')};
+    width: ${({ $isSticky }) => ($isSticky ? '6rem' : '10rem')};
   }
 
   .big-bar {
     display: flex;
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
 
     .nav-link {
       color: ${({ $isSticky }) => ($isSticky ? '#050505' : 'var(--white)')};
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     li:hover {

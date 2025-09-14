@@ -7,7 +7,7 @@ const MenuButtonWrapper = styled.button`
   font-size: 2rem;
   cursor: pointer;
   transition: var(--transition);
-  z-index: 999;
+  z-index: 9999;
 
   ${({ $open }) =>
     $open &&

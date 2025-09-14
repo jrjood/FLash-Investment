@@ -19,6 +19,9 @@ const Wrapper = styled.div`
     margin-bottom: 1rem;
   }
 
+  .content {
+    height: 0;
+  }
   .tag-dot {
     font-size: 0.9rem;
     font-weight: 600;
