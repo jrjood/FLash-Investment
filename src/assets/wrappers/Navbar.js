@@ -43,7 +43,7 @@ const Wrapper = styled.nav`
     background-color: ${({ $isSticky }) =>
       $isSticky ? 'var(--primary-100)' : 'transparent'};
     box-shadow: ${({ $isSticky }) =>
-      $isSticky ? '0 2px 8px rgba(0,0,0,0.1)' : 'none'};
+      $isSticky ? '0 8px 8px rgba(0, 0, 0, 0.17)' : 'none'};
 
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
       box-shadow 0.3s ease-in-out;

@@ -1,9 +1,9 @@
 const links = [
-  { text: 'home', path: '.' },
-  { text: 'about', path: 'about' },
-  { text: 'projects', path: 'projects' },
-  { text: 'clients', path: 'clients' },
-  { text: 'contact', path: 'contact' },
+  { key: 'nav.home', path: '.' },
+  { key: 'nav.about', path: 'about' },
+  { key: 'nav.projects', path: 'projects' },
+  { key: 'nav.clients', path: 'clients' },
+  { key: 'nav.contact', path: 'contact' },
 ];
 
 export default links;

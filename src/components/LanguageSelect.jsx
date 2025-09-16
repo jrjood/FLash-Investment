@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import {
   Root,
   Button,
@@ -6,9 +6,7 @@ import {
   Listbox,
   Option,
 } from '../assets/wrappers/LanguageSelect';
-
 import { useTranslation } from 'react-i18next';
-
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 const LANGS = [
@@ -16,27 +14,28 @@ const LANGS = [
   { code: 'ar', label: 'العربية' },
 ];
 
-export default function LanguageSelect({ value = 'en', onChange, $isSticky }) {
+export default function LanguageSelect({ $isSticky }) {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(
-    Math.max(
-      0,
-      LANGS.findIndex((l) => l.code === value)
-    )
+
+  const currentCode = useMemo(
+    () => (i18n.language || 'en').slice(0, 2),
+    [i18n.language]
   );
+  const currentIndex = Math.max(
+    0,
+    LANGS.findIndex((l) => l.code === currentCode)
+  );
+  const [activeIndex, setActiveIndex] = useState(currentIndex);
+
   const rootRef = useRef(null);
   const btnRef = useRef(null);
   const listRef = useRef(null);
 
-  const selectIndex = (i) => {
-    const lang = LANGS[i];
-    if (!lang) return;
-    onChange?.(lang.code);
-    setActiveIndex(i);
-    setOpen(false);
-    btnRef.current?.focus();
-  };
+  // keep active highlight in sync with the real language
+  useEffect(() => {
+    setActiveIndex(currentIndex);
+  }, [currentIndex]);
 
   // close on click outside
   useEffect(() => {
@@ -48,7 +47,24 @@ export default function LanguageSelect({ value = 'en', onChange, $isSticky }) {
     return () => document.removeEventListener('mousedown', onDoc);
   }, [open]);
 
-  // keyboard
+  // listen to external language changes (e.g., elsewhere in app)
+  useEffect(() => {
+    const handler = (lng) => {
+      // ensure UI sync if changeLanguage called from somewhere else
+      setOpen(false);
+    };
+    i18n.on('languageChanged', handler);
+    return () => i18n.off('languageChanged', handler);
+  }, [i18n]);
+
+  const selectIndex = (i) => {
+    const lang = LANGS[i];
+    if (!lang) return;
+    i18n.changeLanguage(lang.code); // persist + flips dir via your i18n.js
+    setOpen(false);
+    btnRef.current?.focus();
+  };
+
   const onKeyDown = (e) => {
     if (
       !open &&
@@ -56,13 +72,12 @@ export default function LanguageSelect({ value = 'en', onChange, $isSticky }) {
     ) {
       e.preventDefault();
       setOpen(true);
-      setTimeout(
-        () =>
-          listRef.current
-            ?.querySelector('[data-active="true"]')
-            ?.scrollIntoView({ block: 'nearest' }),
-        0
-      );
+      // scroll active option into view after open
+      setTimeout(() => {
+        listRef.current
+          ?.querySelector('[data-active="true"]')
+          ?.scrollIntoView({ block: 'nearest' });
+      }, 0);
       return;
     }
     if (!open) return;
@@ -83,10 +98,10 @@ export default function LanguageSelect({ value = 'en', onChange, $isSticky }) {
       e.preventDefault();
       selectIndex(activeIndex);
     }
-    if (e.key === 'Tab') {
-      setOpen(false);
-    } // allow normal tabbing
+    if (e.key === 'Tab') setOpen(false);
   };
+
+  const buttonLabel = LANGS[currentIndex]?.label ?? 'English';
 
   return (
     <Root ref={rootRef}>
@@ -100,7 +115,7 @@ export default function LanguageSelect({ value = 'en', onChange, $isSticky }) {
         onKeyDown={onKeyDown}
         $isSticky={$isSticky}
       >
-        {LANGS.find((l) => l.code === value)?.label ?? 'English'}
+        {buttonLabel}
         <Chevron $open={open}>
           <MdOutlineKeyboardArrowDown />
         </Chevron>
@@ -120,14 +135,11 @@ export default function LanguageSelect({ value = 'en', onChange, $isSticky }) {
               key={l.code}
               id={`lang-opt-${i}`}
               role='option'
-              aria-selected={i === activeIndex}
-              data-active={i === activeIndex}
+              aria-selected={currentIndex === i}
+              data-active={activeIndex === i}
               onMouseEnter={() => setActiveIndex(i)}
-              onMouseDown={(e) => e.preventDefault()} // prevent button blur before click
-              onClick={() => {
-                i18n.changeLanguage(l.code);
-                selectIndex(i);
-              }}
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => selectIndex(i)}
             >
               {l.label}
             </Option>

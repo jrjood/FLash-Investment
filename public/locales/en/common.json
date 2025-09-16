@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "clients": "Clients",
+    "contact": "Contact",
+    "news": "News & Guides"
+  },
+  "buttons": {
+    "learnMore": "LEARN MORE",
+    "readMore": "Read More",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai';
 import { IoIosMenu } from 'react-icons/io';
-import {
-  FaFacebookF,
-  FaWhatsapp,
-  FaInstagram,
-  FaLinkedin,
-} from 'react-icons/fa';
 import { Logo, NavLinks } from '.';
 import Wrapper from '../assets/wrappers/Navbar';
 import MenuButtonWrapper from '../assets/wrappers/MenuButtonWrapper';
@@ -18,6 +13,7 @@ import LanguageSelect from './LanguageSelect';
 const HIDE_AFTER_PX = 80; // how many px AFTER sticky activation before hiding on scroll-down
 
 const NavBar = () => {
+  const { t } = useTranslation('common');
   const [lang, setLang] = useState('en');
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -138,7 +134,7 @@ const NavBar = () => {
         </Link>
         <div className='big-bar'>
           <div className='test'>
-            <Link className='nav-link'>News & Guides</Link>
+            <Link className='nav-link'>{t('nav.news')}</Link>
             <div className='line'></div>
             <LanguageSelect
               $isSticky={isSticky}
