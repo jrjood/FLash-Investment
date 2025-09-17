@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "line1": "WHERE",
+    "line2": "SPEED",
+    "line3": "MEETS",
+    "line4": "SUCCESS",
+    "paragraph": "At Flash Investment, we believe real estate is more than buildings—it’s about shaping communities and creating lasting value. With a team of 100+ experts and our headquarters in Cairo, we deliver innovative residential and commercial projects that redefine Egypt’s property landscape.",
+    "button": "LEARN MORE"
+  },
+  "about": {
+    "paragraph": "At Flash Investment, building isn’t just about bricks and mortar; it’s about vision, trust, and creating lasting value. We’re not your typical real estate company. We’re the planners, the builders, and the innovators shaping Egypt’s property future.",
+    "highlight": "REAL ESTATE IS OUR DNA",
+    "button": "GET IN TOUCH"
+  },
+  "milestones": {
+    "topText": "Our portfolio showcases a wide range of successful projects that highlight our commitment to quality and innovation in real estate.",
+    "clients": "CLIENTS",
+    "projects": "PROJECTS",
+    "since": "SINCE",
+    "sinceSmall": "Since",
+    "sinceYear": "2001",
+    "plus": "+"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "button": "Explore more",
+    "project1": "project one",
+    "project2": "project two",
+    "project3": "project three",
+    "project4": "project four",
+    "project5": "project five"
+  },
+  "services": {
+    "title": "Services",
+    "items": {
+      "Swimming_Pools": "Swimming_Pools",
+      "Health_Club_and_Spa": "Health_Club_and_Spa",
+      "Commercial_Areas": "Commercial_Areas",
+      "Security_and_Guarding": "Security_and_Guarding",
+      "Childrens_Area": "Childrens_Area",
+      "Bicycle_Paths": "Bicycle_Paths",
+      "Sports_Fields": "Sports_Fields",
+      "Parking": "Parking"
+    }
+  }
+}

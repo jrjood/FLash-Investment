@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation('home');
+
   return (
     <Wrapper id='hero' className='section-container'>
       <div>
@@ -23,22 +25,16 @@ const HeroSection = () => {
       <div className='content '>
         <div className='left flex-center'>
           <div className='info'>
-            <p>WHERE</p>
-            <p>SPEED</p>
-            <p>MEETS</p>
-            <p>SUCCESS</p>
+            <p>{t('hero.line1')}</p>
+            <p>{t('hero.line2')}</p>
+            <p>{t('hero.line3')}</p>
+            <p>{t('hero.line4')}</p>
           </div>
         </div>
         <div className='right '>
-          <p>
-            At Flash Investment, we believe real estate is more than
-            buildings—it’s about shaping communities and creating lasting value.
-            With a team of 100+ experts and our headquarters in Cairo, we
-            deliver innovative residential and commercial projects that redefine
-            Egypt’s property landscape.
-          </p>
+          <p>{t('hero.paragraph')}</p>
           <Link className='btn-container' to='about'>
-            <button className='btn'>LEARN MORE</button>
+            <button className='btn'>{t('hero.button')}</button>
           </Link>
         </div>
       </div>
