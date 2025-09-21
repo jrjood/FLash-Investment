@@ -15,6 +15,13 @@ const Wrapper = styled.section`
     /* font-family: 'Proxima-Nova', sans-serif; */
     font-weight: 600;
   }
+
+  .btn-contact {
+    width: 60%;
+    height: 6rem;
+    font-size: 1.5rem;
+  }
+
   .contact-item {
     display: flex;
     flex-direction: column;
@@ -22,36 +29,7 @@ const Wrapper = styled.section`
     text-align: center;
     position: relative;
   }
-  .contact-circle {
-    width: 5rem;
-    height: 5rem;
-    background: var(--primary-300);
-    border-radius: 50%;
-    display: flex;
-    color: var(--main-green);
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.7rem;
-    font-size: 1.8rem;
-    transition: all 0.1s ease-in-out;
-    &:hover {
-      font-size: 2rem;
-      transform: rotate(-20deg);
-    }
-  }
-  .label {
-    /* margin: 0.5rem 0; */
-    font-size: 1.5rem;
-  }
-  .info {
-    color: #00aaff;
-    /* min-height: 8rem; */
-    font-size: 1rem;
-    text-decoration: none;
-    &:hover {
-      color: #0075af;
-    }
-  }
+
   .divider {
     width: 1px;
     height: 5rem;
@@ -59,6 +37,7 @@ const Wrapper = styled.section`
     opacity: 0.2;
     margin: 0 1rem;
   }
+
   @media (max-width: 44rem) {
     height: 100%;
     .contact-top {

@@ -42,7 +42,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: var(--black);
+  background-color: var(--main-green);
   /* Ensure safe area fills properly on iPhones */
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -140,7 +140,7 @@ button {
 }
 
 body {
-  background: var(--black);
+  background: var(--main-green);
   color: var(--white);
   font-family: 'EB Garamond', serif, system-ui, sans-serif, 'Rubik', 'Segoe UI',
     'Open Sans', 'Helvetica Neue';
@@ -342,7 +342,7 @@ button:disabled {
 
 .title {
   margin-bottom: 2rem;
-  text-align: left;
+  /* text-align: left; */
   /* font-family: 'Rama Gothic M', sans-serif !important; */
   font-weight: bold;
   text-transform: uppercase;

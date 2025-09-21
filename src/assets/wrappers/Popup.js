@@ -50,6 +50,14 @@ const Wrapper = styled.div`
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    align-self: center;
+  }
   .closeBtn {
     position: absolute;
     top: 0.75rem;

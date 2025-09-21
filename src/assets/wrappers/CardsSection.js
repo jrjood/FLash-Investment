@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
   background-color: #050505;
   color: var(--white);
-  text-align: left;
+  /* text-align: left; */
   padding-bottom: 1rem;
 
   .container {
@@ -102,7 +102,7 @@ const Wrapper = styled.section`
   .label {
     position: absolute;
     bottom: 3rem;
-    left: 0;
+    inset-inline-start: 0; /* replaces left: 0; works with rtl/ltr */
     width: 90%;
     height: 2.5rem;
     background: var(--primary-300);
@@ -110,7 +110,11 @@ const Wrapper = styled.section`
     font-weight: bold;
     color: var(--black);
     font-size: 1rem;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    /* fix border radius for rtl/ltr */
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    border-end-end-radius: var(--border-radius);
+    border-start-end-radius: var(--border-radius);
     text-transform: uppercase;
     transition: var(--transition);
   }

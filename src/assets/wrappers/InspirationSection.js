@@ -1,18 +1,22 @@
 import styled from 'styled-components';
-import bgImage from '../images/backgrounds/AboutPageImages/Inspiration-bg.svg'; // background image
+import bgImage from '../images/backgrounds/Inspiration-bg.svg'; // background image
+import bgImage2 from '../images/backgrounds/Inspiration-bg2.svg'; // background image
 
 const Wrapper = styled.section`
   height: fit-content;
   width: 100%;
   display: flex;
   align-items: center;
-  background-image: url(${bgImage});
-  background-repeat: no-repeat;
   background-color: var(--primary-300);
-  background-position-x: 98%;
-  /* border-top: 40px var(--black) solid; */
+  background-image: ${(p) => (p.$rtl ? `url(${bgImage2})` : `url(${bgImage})`)};
+  background-repeat: no-repeat;
+  /* ✅ the important bit: bind to a prop so it always wins */
+  background-position-x: ${(p) => (p.$rtl ? '2%' : '98%')};
+  background-size: contain;
 
   .container {
+    width: 100%;
+
     margin: 0 5rem;
     max-width: 60%;
   }
@@ -54,6 +58,7 @@ const Wrapper = styled.section`
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--black);
+    align-self: center;
   }
 
   //NewsletterForm style

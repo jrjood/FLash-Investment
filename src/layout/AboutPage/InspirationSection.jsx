@@ -1,31 +1,32 @@
+import { useTranslation } from 'react-i18next';
 import Wrapper from '../../assets/wrappers/InspirationSection';
 
 const InspirationSection = () => {
+  const { t, i18n } = useTranslation('about');
+  const isRtl = i18n.language?.startsWith('ar');
+
   return (
-    <Wrapper style={{ border: 'none' }}>
+    <Wrapper
+      $rtl={isRtl}
+      dir={isRtl ? 'rtl' : 'ltr'}
+      style={{ border: 'none' }}
+    >
       <div className='container'>
         <div className='content '>
           <div className='row'>
-            <h3 className='title title-extra'>mission</h3>
+            <h3 className='title title-extra'>
+              {t('inspiration.mission_title')}
+            </h3>
             <div className='text-box'>
-              <p>
-                Our mission is to deliver exceptional real estate developments
-                that combine modern design, functionality, and sustainability.
-                We are committed to providing clients and investors with lasting
-                value, while ensuring communities thrive in safe and inspiring
-                environments.
-              </p>
+              <p>{t('inspiration.mission_text')}</p>
             </div>
           </div>
           <div className='row'>
-            <h3 className='title title-extra'>vision</h3>
+            <h3 className='title title-extra'>
+              {t('inspiration.vision_title')}
+            </h3>
             <div className='text-box'>
-              <p>
-                Our vision is to become a leading name in the real estate sector
-                by shaping innovative, sustainable, and high-quality
-                developments. We aim to redefine modern living in Egypt and the
-                region, building communities that stand the test of time.
-              </p>
+              <p>{t('inspiration.vision_text')}</p>
             </div>
           </div>
         </div>

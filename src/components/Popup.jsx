@@ -1,8 +1,11 @@
 import { useEffect, useRef } from 'react';
 import Wrapper from '../assets/wrappers/Popup';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Popup = ({ onClose, data }) => {
+  const { t } = useTranslation('home');
+
   const popupRef = useRef();
 
   useEffect(() => {
@@ -21,19 +24,23 @@ const Popup = ({ onClose, data }) => {
         <button className='closeBtn' onClick={onClose}>
           &times;
         </button>
-        <h2 className='title'>{data.title}</h2>
+        <h2 className='title'>{t(data.title).replace(/_/g, ' ')}</h2>
 
         <div className='scrollContainer'>
           <div className='popup-card'>
             {/* <img className='img' src={data.image} alt={data.text} /> */}
             {/* <div className='overlay' /> */}
             {/* <div className='label'> {data.text}</div> */}
-            <p>{data.text}</p>
+            <p>{t(data.text)}</p>
           </div>
         </div>
-        <Link to='projects'>
-          <button className='btn'>explore projects</button>
-        </Link>
+        <div className='btn-container'>
+          <Link to='projects'>
+            <button className='btn popup-btn'>
+              {t('services.popup_button')}
+            </button>
+          </Link>
+        </div>
       </div>
     </Wrapper>
   );

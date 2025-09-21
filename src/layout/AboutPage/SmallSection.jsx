@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -22,10 +23,14 @@ const Wrapper = styled.section`
     }
   }
 `;
+
 const SmallSection = () => {
+  const { t, i18n } = useTranslation('about');
+  const isAr = i18n.language?.startsWith('ar');
+
   return (
-    <Wrapper>
-      <h3>SHAPING TOMORROW’S COMMUNITIES</h3>
+    <Wrapper dir={isAr ? 'rtl' : 'ltr'}>
+      <h3>{t('small.text')}</h3>
     </Wrapper>
   );
 };

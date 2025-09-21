@@ -50,6 +50,7 @@ const Wrapper = styled.footer`
     align-items: end;
     max-width: 20rem;
     text-align: right;
+    line-height: 1.2;
   }
   .designer-link {
     color: #ff0080;

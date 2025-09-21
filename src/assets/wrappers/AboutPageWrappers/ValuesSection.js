@@ -3,11 +3,12 @@ import bgImage from '../../../assets/images/backgrounds/AboutPageImages/valuesSe
 
 const Wrapper = styled.section`
   position: relative;
-  background: url(${bgImage}) center/cover no-repeat;
+  /* background: url(${bgImage}) center/cover no-repeat; */
+  background-color: var(--main-green);
   color: var(--white);
   width: 100%;
   height: fit-content;
-  background-color: var(--black);
+  /* background-color: var(--black); */
 
   .cards-grid {
     display: grid;

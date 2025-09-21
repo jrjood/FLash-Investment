@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  min-width: 100%;
+  width: 100%;
   overflow: hidden;
 
   .card-box {

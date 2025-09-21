@@ -1,18 +1,19 @@
-import bgImage from '../assets/images/backgrounds/ClientsPageImages/clientspage-bg.jpg'; // background image
-
+import bgImage from '../assets/images/backgrounds/ClientsPageImages/clientspage-bg.jpg';
 import {
   PageStarter,
-  ContactsSection,
   InspirationSection,
   ClientLogos,
 } from '../layout/ClientsPage/';
+import { useTranslation } from 'react-i18next';
 
 const ClientsPage = () => {
+  const { t } = useTranslation('clients');
+
   return (
     <>
-      <PageStarter title='clients' imgPath={bgImage} />
+      <PageStarter title={t('clients.pageTitle')} imgPath={bgImage} />
       <ClientLogos />
-      <InspirationSection quote='PIONEERING WITH PURPOSE' />
+      <InspirationSection quote={t('clients.inspirationQuote')} />
       {/* <ContactsSection /> */}
     </>
   );

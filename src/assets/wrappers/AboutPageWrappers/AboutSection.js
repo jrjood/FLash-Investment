@@ -1,17 +1,21 @@
 import styled from 'styled-components';
-import aboutImage from '../../images/backgrounds/AboutPageImages/about-bg2.jpeg';
+import aboutImage from '../../images/backgrounds/AboutPageImages/logo2.png';
 
 const Wrapper = styled.section`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
-  background: radial-gradient(circle, #0e281b 0%, #000000 100%);
+  /* background: radial-gradient(circle, #0e281b 0%, #000000 100%); */
+  background-color: var(--main-green);
   height: 100%;
   width: 100%;
 
   .image-box {
     margin: auto 0;
     /* width: 42%; */
-    height: 50rem;
+    height: 40vh;
     width: 50%;
     display: block;
     background-image: url(${aboutImage});
@@ -36,7 +40,7 @@ const Wrapper = styled.section`
   }
   .highlight {
     font-size: 1.7rem;
-    color: var(--primary-400);
+    color: var(--primary-300);
     /* font-family: 'Rama Gothic M'; */
     margin-bottom: 2.5rem;
   }

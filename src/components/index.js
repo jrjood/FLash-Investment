@@ -13,3 +13,5 @@ export { default as Cards } from './Cards';
 export { default as ImageSlider } from './ImageSlider';
 export { default as TagList } from './TagList';
 export { default as Navbar } from './Navbar';
+export { default as Founders } from './Founders';
+export { default as InspirationSection } from './InspirationSection';

@@ -4,18 +4,23 @@ import {
   FaInstagram,
   FaLinkedin,
 } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 import { Logo } from '../components';
 import Wrapper from '../assets/wrappers/Footer';
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
+
   return (
-    <Wrapper>
+    <Wrapper dir='ltr'>
       <Logo />
       <div className='social-container'>
         <div className='social-icons'>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             className='facebook'
             href='https://www.facebook.com/p/Flash-investment-61559102775358/'
           >
@@ -23,21 +28,23 @@ const Footer = () => {
           </a>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             className='whatsapp'
-            href='https://api.whatsapp.com/send?phone=%2B201118883882&context=AfdU1Gbx80Rb5EBFtcc1WIaGQngzVqllH80wE9tNruDRPdQp8A5xgU9YrmIIr95RDt20G-BumoaH5J1yjhsCfoGwifkhkfb3pTR-idgh8xgXOZUQsq6ns2zSHmcPMbt3LXD1ap0ZCZculE5tUldZkTAv5A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExSE1OZmd1cVh6YjJjWHhUNwEe0gdTAAKTmGdviMnEgCNyNaHua0iLGiKzghtdXeaGNJKILDQlxhLl9loQF0I_aem_bYn6wvZx2jU5JfKPdtKgCA'
+            href='https://api.whatsapp.com/send?phone=%2B201118883882'
           >
             <FaWhatsapp />
           </a>
           <a
             target='_blank'
+            rel='noopener noreferrer'
             className='instagram'
             href='https://www.instagram.com/flash.investment/'
           >
             <FaInstagram />
           </a>
-
           <a
             target='_blank'
+            rel='noopener noreferrer'
             className='linkedin'
             href='https://www.linkedin.com/company/108218609/admin/dashboard/'
           >
@@ -45,20 +52,34 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className='copy-text'>
-          <p className='developed-by'>
-            Flash Investment 2025. All Rights Reserved. Developed & Designed By.
-            <a
-              target='_blank'
-              href='https://portfolio-webpage-jrd.vercel.app/'
-              className='designer-link'
-            >
-              JORDI
-            </a>
-          </p>
+        <div
+          style={{
+            fontFamily: isArabic
+              ? 'EB Garamond, serif'
+              : 'Proxima-Nova, sans-serif',
+          }}
+          className='copy-text'
+        >
+          <div className='developed-by'>
+            {t('footer.rights')}
+
+            <p dir='rtl'>
+              {t('footer.developed')}
+
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://portfolio-webpage-jrd.vercel.app/'
+                className='designer-link'
+              >
+                JORDI
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </Wrapper>
   );
 };
+
 export default Footer;

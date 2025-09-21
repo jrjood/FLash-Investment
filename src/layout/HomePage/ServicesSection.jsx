@@ -7,6 +7,7 @@ const ServicesSection = () => {
 
   // get all keys from items and map them to translated labels
   const services = Object.keys(t('services.items', { returnObjects: true }));
+  console.log(services);
 
   return (
     <>
@@ -14,7 +15,7 @@ const ServicesSection = () => {
         <div className='container'>
           <h2 className='title title-medium'>{t('services.title')}</h2>
           <ServicesCard
-            services={services.map((key) => t(`services.items.${key}`))}
+            services={services /* .map((key) => t(`services.items.${key}`)) */}
           />
         </div>
       </Wrapper>

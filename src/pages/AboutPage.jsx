@@ -14,9 +14,9 @@ const AboutPage = () => {
     <>
       <PageStarter title='about us' imgPath={bgImage} />
       <AboutSection />
+      <PropositionSection />
       <InspirationSection />
       <ValuesSection />
-      <PropositionSection />
       <SmallSection />
       <ContactsSection />
     </>

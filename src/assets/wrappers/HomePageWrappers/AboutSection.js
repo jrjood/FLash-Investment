@@ -45,7 +45,7 @@ const Wrapper = styled.section`
   }
   .highlight {
     font-size: 1.7rem;
-    color: var(--primary-400);
+    color: var(--primary-300);
     /* font-family: 'Rama Gothic M'; */
     margin-bottom: 2.5rem;
   }

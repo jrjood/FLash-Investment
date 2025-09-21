@@ -4,6 +4,7 @@ const Wrapper = styled.section`
   background: var(--primary-300);
   text-align: center;
   padding: 2rem 5rem;
+  border-bottom: 0.1rem solid var(--main-green);
 
   .logos-grid {
     margin: 3rem auto;

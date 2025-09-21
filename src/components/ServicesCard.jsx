@@ -11,6 +11,7 @@ import { LuBaby } from 'react-icons/lu';
 import { MdSpa } from 'react-icons/md';
 import Popup from './Popup';
 import servicesPopup from '../utils/servicesPopup';
+import { useTranslation } from 'react-i18next';
 
 const icons = {
   Swimming_Pools: <FaSwimmingPool size={32} />,
@@ -24,6 +25,8 @@ const icons = {
 };
 
 const ServicesCard = ({ services }) => {
+  const { t } = useTranslation('home');
+
   const [showPopup, setShowPopup] = useState(false);
   const [selectedData, setSelectedData] = useState(null);
 
@@ -48,7 +51,9 @@ const ServicesCard = ({ services }) => {
           >
             <div className='card-icon'>{icons[service]}</div>
             <span className='line-highlight' aria-hidden />
-            <span className='card-title'>{label}</span>
+            <span className='card-title'>
+              {t(`services.items.${service}.title`).replace(/_/g, ' ')}
+            </span>
           </div>
         );
       })}

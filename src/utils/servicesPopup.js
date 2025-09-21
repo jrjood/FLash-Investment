@@ -13,50 +13,50 @@ import img8 from '../assets/images/popupImages/Digital_Marketing.png';
 const servicesPopup = {
   Swimming_Pools: {
     image: img1,
-    title: 'Swimming Pools',
-    text: `Various swimming pools designed for both adults and children, ensuring safe and enjoyable experiences for the entire family.`,
+    title: 'services.items.Swimming_Pools.title',
+    text: `services.items.Swimming_Pools.text`,
   },
 
   Health_Club_and_Spa: {
     image: img2,
-    title: 'Health Club and Spa',
-    text: `A fully integrated sports center and spa area offering fitness facilities, relaxation zones, and wellness services.`,
+    title: 'services.items.Health_Club_and_Spa.title',
+    text: `services.items.Health_Club_and_Spa.text`,
   },
 
   Commercial_Areas: {
     image: img3,
-    title: 'Commercial Areas',
-    text: `Conveniently located cafes, restaurants, and a supermarket to meet daily needs within the community.`,
+    title: 'services.items.Commercial_Areas.title',
+    text: `services.items.Commercial_Areas.text`,
   },
 
   Security_and_Guarding: {
     image: img4,
-    title: 'Security and Guarding',
-    text: `24/7 security and professional guarding services to ensure safety, comfort, and peace of mind.`,
+    title: 'services.items.Security_and_Guarding.title',
+    text: `services.items.Security_and_Guarding.text`,
   },
 
   Childrens_Area: {
     image: img5,
-    title: "Children's Area",
-    text: `Safe, designated play areas where children can enjoy recreational activities under secure supervision.`,
+    title: 'services.items.Childrens_Area.title',
+    text: `services.items.Childrens_Area.text`,
   },
 
   Bicycle_Paths: {
     image: img6,
-    title: 'Bicycle Paths',
-    text: `Dedicated cycling and walking paths designed for safety, fitness, and leisure.`,
+    title: 'services.items.Bicycle_Paths.title',
+    text: `services.items.Bicycle_Paths.text`,
   },
 
   Sports_Fields: {
     image: img7,
-    title: 'Sports Fields',
-    text: `Multi-purpose courts for tennis, football, and basketball, offering residents spaces to stay active and engaged.`,
+    title: 'services.items.Sports_Fields.title',
+    text: `services.items.Sports_Fields.text`,
   },
 
   Parking: {
     image: img8,
-    title: 'Parking',
-    text: `Private parking facilities allocated for each unit, ensuring security and convenience for residents.`,
+    title: 'services.items.Parking.title',
+    text: `services.items.Parking.text`,
   },
 };
 

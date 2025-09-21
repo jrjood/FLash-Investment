@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
   position: relative;
   background-color: #050505;
-  text-align: center;
+  /* text-align: center; */
 
   .container {
     position: relative;
@@ -19,7 +19,7 @@ const Wrapper = styled.section`
 
   .title {
     color: var(--white);
-    text-align: left;
+    /* text-align: left; */
     margin-bottom: 1.25rem;
   }
 
