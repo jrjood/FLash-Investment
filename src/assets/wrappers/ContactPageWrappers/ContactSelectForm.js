@@ -14,10 +14,18 @@ const Wrapper = styled.section`
     /* transform: translateY(-8rem); */
     /* font-family: 'Proxima-Nova', sans-serif; */
     font-weight: 600;
+    padding: 6rem 0;
   }
 
+  .btn-container {
+    width: 80%;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
   .btn-contact {
-    width: 60%;
+    width: 100%;
     height: 6rem;
     font-size: 1.5rem;
   }

@@ -18,25 +18,20 @@ const Wrapper = styled.footer`
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     a {
       color: var(--white);
       transition: var(--transition);
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .facebook:hover {
-      color: #1877f2;
-    }
-    .whatsapp:hover {
-      color: #25d366;
-    }
-    .instagram:hover {
-      color: #ee2a7b;
-    }
-    .linkedin:hover {
-      color: #0077b5;
+      border-radius: 2px;
+      padding: 0.3rem;
+      background-color: var(--primary-100);
+      color: var(--main-green);
+      &:hover {
+        background-color: var(--primary-400);
+      }
     }
   }
   .copy-text {

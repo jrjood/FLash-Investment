@@ -1,10 +1,18 @@
+import { useTranslation } from 'react-i18next';
 import InspirationSection from '../../components/InspirationSection';
-import { FaFacebookF, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaWhatsapp,
+  FaInstagram,
+  FaLinkedin,
+} from 'react-icons/fa';
 
 const NewsletterForm = () => {
+  const { t } = useTranslation('contact');
+
   return (
     <InspirationSection>
-      <h2 className='newsletter-title'>Follow us on social media</h2>
+      <h2 className='newsletter-title'>{t('contact.follow_us')}</h2>
       <div className='social-icons'>
         <a
           target='_blank'
@@ -26,6 +34,14 @@ const NewsletterForm = () => {
           href='https://www.instagram.com/ignitcrew/'
         >
           <FaInstagram />
+        </a>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          className='linkedin'
+          href='https://www.linkedin.com/company/108218609/admin/dashboard/'
+        >
+          <FaLinkedin />
         </a>
       </div>
     </InspirationSection>

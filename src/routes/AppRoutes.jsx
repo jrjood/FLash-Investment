@@ -15,6 +15,12 @@ import {
   ProjectNissan,
   ProjectBritishPetroleum,
 } from '../pages/AllProjects';
+import {
+  ContactForm,
+  ContactSelectForm,
+  JoinCrewForm,
+  SiteVisitForm,
+} from '../layout/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +40,29 @@ const router = createBrowserRouter([
       },
       { path: '/projects/proj5', element: <ProjectTotal /> },
       { path: 'clients', element: <ClientsPage /> },
-      { path: 'contact', element: <ContactPage /> },
+      {
+        path: 'contact',
+        element: <ContactPage />,
+        children: [
+          {
+            index: true,
+            element: <ContactSelectForm />,
+          },
+          {
+            path: '/contact/Contact-Us',
+            element: <ContactForm />,
+          },
+
+          {
+            path: '/contact/site-visit',
+            element: <SiteVisitForm />,
+          },
+          {
+            path: '/contact/join-us',
+            element: <JoinCrewForm />,
+          },
+        ],
+      },
     ],
   },
 ]);

@@ -1,0 +1,14 @@
+{
+  "contact": {
+    "contact_starter": "Contact Us",
+    "follow_us": "Follow us on social media",
+    "select": {
+      "title": "Contact Options",
+      "buttons": {
+        "contact_us": "Contact Us",
+        "site_visit": "Site Visit",
+        "join_us": "Join Us"
+      }
+    }
+  }
+}

@@ -1,48 +1,45 @@
-import { FaPhone, FaLocationDot } from 'react-icons/fa6';
-import { IoMdMail } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 import Wrapper from '../../assets/wrappers/ContactPageWrappers/ContactSelectForm';
+import { Link } from 'react-router-dom';
 
 const ContactSelectForm = () => {
-  const { t } = useTranslation('common');
+  // use the "common" namespace
+  const { t } = useTranslation('contact');
 
   return (
     <Wrapper>
-      <div className='contact-top flex-center'>
-        <div className='contact-item'>
-          <button
-            className='btn btn-contact'
-            target='_blank'
-            rel='noopener noreferrer'
-            href={`tel:${t('contact.phone')}`}
-          >
-            Contact Us
-          </button>
-        </div>
+      <div className='section-container'>
+        <h3 className='title'>{t('contact.select.title')}</h3>
 
-        <div className='divider' />
+        <div className='contact-top flex-center'>
+          <div className='contact-item'>
+            <Link className='btn-container' to='/contact/contact-us'>
+              {/* Internal navigation => no target/rel on a <button> */}
+              <button className='btn btn-contact' type='button'>
+                {t('contact.select.buttons.contact_us')}
+              </button>
+            </Link>
+          </div>
 
-        <div className='contact-item'>
-          <button
-            className='btn btn-contact'
-            target='_blank'
-            rel='noopener noreferrer'
-            href={`tel:${t('contact.phone')}`}
-          >
-            Site Visit
-          </button>
-        </div>
+          <div className='divider' />
 
-        <div className='divider' />
-        <div className='contact-item'>
-          <button
-            className='btn btn-contact'
-            target='_blank'
-            rel='noopener noreferrer'
-            href={`tel:${t('contact.phone')}`}
-          >
-            Join Us
-          </button>
+          <div className='contact-item'>
+            <Link className='btn-container' to='/contact/site-visit'>
+              <button className='btn btn-contact' type='button'>
+                {t('contact.select.buttons.site_visit')}
+              </button>
+            </Link>
+          </div>
+
+          <div className='divider' />
+
+          <div className='contact-item'>
+            <Link className='btn-container' to='/contact/join-us'>
+              <button className='btn btn-contact' type='button'>
+                {t('contact.select.buttons.join_us')}
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </Wrapper>

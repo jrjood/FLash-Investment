@@ -122,26 +122,32 @@ const Wrapper = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: var(--border-radius);
+      border-radius: 2px;
       padding: 0.5rem;
     }
-    .facebook:hover {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-    .whatsapp:hover {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-    .instagram:hover {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
     .facebook {
-      background-color: #1255adff;
+      background-color: rgba(0, 0, 0, 0.6);
     }
     .whatsapp {
-      background-color: #1b9548ff;
+      background-color: rgba(0, 0, 0, 0.6);
     }
     .instagram {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .linkedin {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .facebook:hover {
+      background-color: #1255adff;
+    }
+    .whatsapp:hover {
+      background-color: #1b9548ff;
+    }
+    .instagram:hover {
       background-color: #b11f5cff;
+    }
+    .linkedin:hover {
+      background-color: #0077b5;
     }
   }
 

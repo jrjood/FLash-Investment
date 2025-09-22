@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom';
 import Wrapper from '../../assets/wrappers/ContactPageWrappers/ContactForm';
 
 const ContactForm = () => {
   return (
     <Wrapper className='contact-section'>
       <div className='container'>
+        <Link className='btn-container' to='/contact'>
+          <button className='back-btn'>go back &rarr;</button>
+        </Link>
         <h2 className='form-title'>GET IN TOUCH</h2>
         <form
           className='contact-form'

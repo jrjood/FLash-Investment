@@ -1,5 +1,6 @@
 import bgImage from '../assets/images/backgrounds/ContactPageImages/contactpage-bg.jpg'; // background image
 import { Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import {
   PageStarter,
@@ -11,15 +12,17 @@ import {
 } from '../layout/ContactPage/';
 
 const ContactPage = () => {
+  const { t } = useTranslation('contact');
+
   return (
     <>
-      <PageStarter title='contact us' imgPath={bgImage} />
-      <ContactForm />
-      <JoinCrewForm />
+      <PageStarter title={t('contact.contact_starter')} imgPath={bgImage} />
+      {/* <ContactForm /> */}
+      {/* <JoinCrewForm /> */}
       <Outlet />
       <NewsletterForm />
-      <SiteVisitForm />
-      <ContactSelectForm />
+      {/* <SiteVisitForm /> */}
+      {/* <ContactSelectForm /> */}
     </>
   );
 };
