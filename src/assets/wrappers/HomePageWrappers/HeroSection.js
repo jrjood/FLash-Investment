@@ -27,8 +27,9 @@ const Wrapper = styled.section`
   }
   .content {
     display: flex;
+    flex-direction: column;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     height: 80%;
     margin: 0 auto;
@@ -39,7 +40,7 @@ const Wrapper = styled.section`
     z-index: 2;
   }
   .left {
-    flex-direction: column;
+    /* flex-direction: column; */
     font-size: 4rem;
     font-weight: bold;
     color: var(--primary-300);
@@ -53,15 +54,17 @@ const Wrapper = styled.section`
   }
   .right {
     flex-direction: column;
+    align-items: center;
     display: flex;
     justify-content: center;
 
     p {
       font-weight: 500;
-      max-width: 33rem;
+      max-width: 63rem;
       font-size: 1.35rem;
       line-height: 1.6;
       margin-bottom: 2rem;
+      text-align: center;
 
       /* text-shadow: 2px 2px 3px rgb(0, 0, 0); */
     }

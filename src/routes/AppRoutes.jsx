@@ -9,11 +9,11 @@ import {
   ContactPage,
 } from '../pages';
 import {
-  ProjectBiskrem,
-  ProjectTotal,
-  ProjectPepsi,
-  ProjectNissan,
-  ProjectBritishPetroleum,
+  ProjectOne,
+  ProjectTwo,
+  ProjectThree,
+  ProjectFour,
+  ProjectFive,
 } from '../pages/AllProjects';
 import {
   ContactForm,
@@ -31,14 +31,14 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'about', element: <AboutPage /> },
       { path: 'projects', element: <ProjectsPage /> },
-      { path: '/projects/proj1', element: <ProjectBiskrem /> },
-      { path: '/projects/proj2', element: <ProjectNissan /> },
-      { path: '/projects/proj3', element: <ProjectPepsi /> },
+      { path: '/projects/proj1', element: <ProjectOne /> },
+      { path: '/projects/proj2', element: <ProjectTwo /> },
+      { path: '/projects/proj3', element: <ProjectThree /> },
       {
         path: '/projects/proj4',
-        element: <ProjectBritishPetroleum />,
+        element: <ProjectFour />,
       },
-      { path: '/projects/proj5', element: <ProjectTotal /> },
+      { path: '/projects/proj5', element: <ProjectFive /> },
       { path: 'clients', element: <ClientsPage /> },
       {
         path: 'contact',

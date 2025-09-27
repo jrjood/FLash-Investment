@@ -27,8 +27,8 @@ const HeroSection = () => {
           <div className='info'>
             <p>{t('hero.line1')}</p>
             <p>{t('hero.line2')}</p>
-            <p>{t('hero.line3')}</p>
-            <p>{t('hero.line4')}</p>
+            {/* <p>{t('hero.line3')}</p> */}
+            {/* <p>{t('hero.line4')}</p> */}
           </div>
         </div>
         <div className='right '>

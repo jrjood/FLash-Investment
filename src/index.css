@@ -12,7 +12,7 @@
   opacity: 1;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Rama Gothic M';
   src: url('/fonts/Rama-Gothic-M-Bold.otf') format('opentype');
   font-style: normal;
@@ -29,7 +29,7 @@
   src: url('/fonts/Proxima-Nova.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
-}
+} */
 
 * {
   margin: 0;
