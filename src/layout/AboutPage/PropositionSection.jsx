@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Wrapper from '../../assets/wrappers/AboutPageWrappers/PropositionSection';
-import owner_image from '../../assets/images/backgrounds/AboutPageImages/Owner.png';
+import owner_image from '../../assets/images/backgrounds/AboutPageImages/owner.png';
 import { Founders } from '../../components';
 
 const PropositionSection = () => {
