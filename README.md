@@ -1,4 +1,4 @@
-# IGNIT CREW 🚀
+# Flash Investment 🚀
 
 A stunning modern website built with **React**, showcasing smooth page transitions, scroll-triggered animations, styled components, and interactive carousels.
 
@@ -6,7 +6,7 @@ A stunning modern website built with **React**, showcasing smooth page transitio
 
 ## 📸 Preview
 
-[🔗 View Live Site](https://jrjood.github.io/IGNIT-Crew/)
+[🔗 View Live Site](https://jrjood.github.io/FLash-Investment/)
 
 ---
 
@@ -46,8 +46,8 @@ A stunning modern website built with **React**, showcasing smooth page transitio
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/jrjood/IGNIT-Crew.git
-cd IGNIT-Crew
+git clone https://github.com/jrjood/FLash-Investment.git
+cd FLash-Investment
 ```
 
 ### 2. Install Dependencies
