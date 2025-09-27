@@ -9,6 +9,19 @@
         "site_visit": "Site Visit",
         "join_us": "Join Us"
       }
+    },
+    "form": {
+      "back": "go back →",
+      "title": "GET IN TOUCH",
+      "placeholders": {
+        "full_name": "FULL NAME*",
+        "email": "EMAIL ADDRESS*",
+        "phone": "MOBILE NUMBER*",
+        "job_title": "JOB TITLE (OPTIONAL)",
+        "company_name": "COMPANY NAME",
+        "message": "MESSAGE"
+      },
+      "button": "SEND"
     }
   }
 }
