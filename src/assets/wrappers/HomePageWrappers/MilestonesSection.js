@@ -22,6 +22,8 @@ const Wrapper = styled.section`
 
   .container {
     /* height: 35rem; */
+    padding-bottom: 2rem;
+    gap: 2rem;
   }
 
   .stats-container {
@@ -32,7 +34,7 @@ const Wrapper = styled.section`
     height: 100%;
     width: 50%;
     flex-direction: column;
-    gap: 8rem;
+    gap: 3rem;
     font-weight: bold;
     position: relative;
   }
@@ -75,18 +77,21 @@ const Wrapper = styled.section`
   }
   .logo-container {
     position: relative;
+    width: 60%;
+    /* height: 12rem; */
     background: linear-gradient(
       90deg,
       rgba(255, 200, 0, 0.01),
       rgba(128, 127, 127, 0.49)
     );
     img {
-      padding-right: 2rem;
+      /* padding-right: 2rem; */
       width: 100%;
       height: 100%;
+      /* padding-left: 3rem; */
     }
     position: relative;
-    &::after {
+    /* &::after {
       content: 'Since';
       font-size: 5rem;
       font-family: 'Rama Gothic M' !important;
@@ -98,7 +103,7 @@ const Wrapper = styled.section`
       position: absolute;
       bottom: 4rem;
       right: 2rem;
-    }
+    } */
   }
   .small-screen {
     display: none;
@@ -119,16 +124,28 @@ const Wrapper = styled.section`
       gap: 8rem;
     }
     .top-text {
-      width: 65%;
+      /* width: 65%; */
     }
   }
 
   @media (max-width: 52.5rem) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .stats-container {
+      align-self: center;
+      gap: 2rem;
+    }
   }
   @media (max-width: 44rem) {
     .logo-container {
-      display: none;
+      /* display: none; */
     }
+
     .content {
       justify-content: center;
       padding-left: 0;

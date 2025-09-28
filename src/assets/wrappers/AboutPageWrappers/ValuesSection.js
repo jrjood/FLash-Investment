@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import bgImage from '../../../assets/images/backgrounds/AboutPageImages/valuesSection-bg.png';
+// import bgImage from '../../../assets/images/backgrounds/AboutPageImages/valuesSection-bg.png';
 
 const Wrapper = styled.section`
   position: relative;
-  /* background: url(${bgImage}) center/cover no-repeat; */
   background-color: var(--main-green);
   color: var(--white);
   width: 100%;

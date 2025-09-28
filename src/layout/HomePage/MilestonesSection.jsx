@@ -30,14 +30,14 @@ const MilestonesSection = () => {
             </div>
           </div>
 
-          <div className='small-screen'>
+          {/* <div className='small-screen'>
             <span className='small-since'>{t('milestones.sinceSmall')}</span>
             <span className='small-date'>{t('milestones.sinceYear')}</span>
-          </div>
+          </div> */}
         </div>
 
         <div className='logo-container'>
-          <h2 className='since'>{t('milestones.since')}</h2>
+          {/* <h2 className='since'>{t('milestones.since')}</h2> */}
           <img src={logo2001} alt={t('milestones.sinceYear')} />
         </div>
       </div>

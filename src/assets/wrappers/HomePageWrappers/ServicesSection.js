@@ -73,6 +73,7 @@ const Wrapper = styled.section`
       letter-spacing: 0.2px;
       font-size: 1.05rem;
       text-transform: uppercase;
+      text-align: center;
     }
 
     &:hover,
