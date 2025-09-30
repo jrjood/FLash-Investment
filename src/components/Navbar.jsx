@@ -134,7 +134,7 @@ const NavBar = () => {
         </Link>
         <div className='big-bar'>
           <div className='test'>
-            <Link className='nav-link'>{t('nav.news')}</Link>
+            <Link className='nav-link news'>{t('nav.news')}</Link>
             <div className='line'></div>
             <LanguageSelect
               $isSticky={isSticky}

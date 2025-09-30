@@ -7,6 +7,7 @@ const Wrapper = styled.section`
   align-items: center;
   z-index: 1;
   padding: 0 2rem;
+  position: relative;
   .overlay {
     position: absolute;
     top: 0;
@@ -33,7 +34,7 @@ const Wrapper = styled.section`
     width: 100%;
     height: 80%;
     margin: 0 auto;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     gap: 2rem;
     /* flex-wrap: wrap; */
     color: var(--white);
@@ -51,6 +52,10 @@ const Wrapper = styled.section`
     font-size: 6rem;
     line-height: 0.8;
     font-weight: 550;
+    text-align: center;
+    P {
+      white-space: nowrap;
+    }
   }
   .right {
     flex-direction: column;
@@ -69,9 +74,21 @@ const Wrapper = styled.section`
       /* text-shadow: 2px 2px 3px rgb(0, 0, 0); */
     }
   }
+
+  @media (max-width: 52.5rem) {
+    padding-top: 3rem;
+    .info {
+      font-size: 4rem;
+    }
+    .right {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
   @media (max-width: 48rem) {
     margin: 0 auto;
-    max-width: 47rem;
+    /* max-width: 47rem; */
     .info {
       font-size: 4.1rem;
       line-height: 1.2;
@@ -109,6 +126,11 @@ const Wrapper = styled.section`
   @media (max-width: 36rem) {
     .info {
       font-size: 86%;
+    }
+  }
+  @media (max-width: 27rem) {
+    .info {
+      font-size: 2.7rem;
     }
   }
 `;

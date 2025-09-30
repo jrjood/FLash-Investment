@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Wrapper from '../../assets/wrappers/ContactPageWrappers/ContactForm';
 
 const ContactForm = () => {
+  const { t, i18n } = useTranslation('contact');
+
   return (
     <Wrapper className='contact-section'>
       <div className='container'>
         <Link className='btn-container' to='/contact'>
-          <button className='back-btn'>go back &rarr;</button>
+          <button className='back-btn'>{t('contact.form.back')}</button>
         </Link>
-        <h2 className='form-title'>GET IN TOUCH</h2>
+        <h2 className='form-title'>{t('contact.form.title')}</h2>
         <form
           className='contact-form'
           action='https://api.web3forms.com/submit'
@@ -23,32 +26,41 @@ const ContactForm = () => {
             <input
               type='text'
               name='fullName'
-              placeholder='FULL NAME*'
+              placeholder={t('contact.form.placeholders.full_name')}
               required
             />
             <input
               type='email'
               name='email'
-              placeholder='EMAIL ADDRESS*'
+              placeholder={t('contact.form.placeholders.email')}
               required
             />
             <input
               type='tel'
               name='phone'
-              placeholder='MOBILE NUMBER*'
+              placeholder={t('contact.form.placeholders.phone')}
               required
+              dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
             />
             <input
               type='text'
               name='jobTitle'
-              placeholder='JOB TITLE (OPTIONAL)'
+              placeholder={t('contact.form.placeholders.job_title')}
             />
-            <input type='text' name='companyName' placeholder='COMPANY NAME' />
+            <input
+              type='text'
+              name='companyName'
+              placeholder={t('contact.form.placeholders.company_name')}
+            />
           </div>
           <div className='right-fields'>
-            <textarea name='message' placeholder='MESSAGE' rows='15' />
+            <textarea
+              name='message'
+              placeholder={t('contact.form.placeholders.message')}
+              rows='15'
+            />
             <button className='btn' type='submit'>
-              SEND
+              {t('contact.form.button')}
             </button>
           </div>
         </form>

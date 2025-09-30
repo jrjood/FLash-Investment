@@ -56,7 +56,7 @@ const Wrapper = styled.footer`
     display: flex;
     align-items: start;
     width: 20%;
-    min-width: 8.125rem;
+    min-width: 10.125rem;
     max-width: 25rem;
     margin-bottom: 0.5rem;
   }
@@ -81,6 +81,7 @@ const Wrapper = styled.footer`
 
     .copy-text {
       text-align: center;
+      font-size: 0.6rem;
     }
 
     .designer-link {

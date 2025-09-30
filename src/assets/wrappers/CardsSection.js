@@ -124,8 +124,8 @@ const Wrapper = styled.section`
       color: var(--primary-400);
     }
 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
   }
   .btn-container {
     align-self: flex-end;
@@ -163,11 +163,11 @@ const Wrapper = styled.section`
       width: 70%;
       font-size: 1.3rem;
     }
-    .btn {
+    /*  .btn {
       position: absolute;
       top: 0;
       right: 10%;
-    }
+    } */
     @media (max-width: 36rem) {
       .label {
         font-size: 1rem;

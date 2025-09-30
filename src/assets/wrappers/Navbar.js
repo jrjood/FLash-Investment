@@ -14,10 +14,15 @@ const Wrapper = styled.nav`
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
     /* color: var(--white); */
     font-weight: 100;
+    .news {
+      white-space: nowrap;
+    }
+
     a {
       font-weight: 350;
       /* color: var(--white); */
@@ -35,10 +40,10 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 7rem;
+    /* gap: 7rem; */
     width: 100%;
     height: 100%;
-    padding: 0 4rem;
+    /* padding: 0 4rem; */
 
     background-color: ${({ $isSticky }) =>
       $isSticky ? 'var(--primary-100)' : 'transparent'};
@@ -54,6 +59,7 @@ const Wrapper = styled.nav`
     pointer-events: ${({ $isSticky, $showNavbar }) =>
       $isSticky && !$showNavbar ? 'none' : 'auto'};
     will-change: transform;
+    padding: 0 1rem;
   }
 
   .logo-container {
@@ -73,7 +79,7 @@ const Wrapper = styled.nav`
 
   .big-bar {
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
     align-items: center;
     justify-content: center;
 
@@ -133,6 +139,12 @@ const Wrapper = styled.nav`
     font-size: 2rem;
     cursor: pointer;
     color: var(--white); /* visible over hero; tweak if needed */
+  }
+
+  @media (max-width: 52.5rem) {
+    .nav-link {
+      font-size: 0.7rem !important;
+    }
   }
 
   @media (max-width: 48rem) {

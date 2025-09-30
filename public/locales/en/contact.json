@@ -22,6 +22,33 @@
         "message": "MESSAGE"
       },
       "button": "SEND"
+    },
+    "site_visit": {
+      "back": "go back →",
+      "title": "Reserve a Site Visit",
+      "placeholders": {
+        "full_name": "FULL NAME*",
+        "email": "EMAIL ADDRESS*",
+        "phone": "MOBILE NUMBER*",
+        "date": "Select a Date*",
+        "message": "MESSAGE"
+      },
+      "button": "Book Now"
+    },
+    "join_crew": {
+      "back": "go back →",
+      "title": "Wanna be a part of the crew?",
+      "placeholders": {
+        "full_name": "FULL NAME*",
+        "email": "EMAIL ADDRESS*",
+        "phone": "MOBILE NUMBER*"
+      },
+      "upload": {
+        "choose_or_drag": "Choose a file or drag it here",
+        "file_selected": "File selected",
+        "remove": "Remove"
+      },
+      "button": "SEND"
     }
   }
 }

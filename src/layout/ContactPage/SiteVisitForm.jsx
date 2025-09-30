@@ -1,13 +1,13 @@
-// SiteVisitForm.jsx
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Wrapper from '../../assets/wrappers/ContactPageWrappers/ContactForm';
 import { Link } from 'react-router-dom';
 
 const SiteVisitForm = () => {
+  const { t, i18n } = useTranslation('contact');
   const dateRef = useRef(null);
 
   const openPicker = () => {
-    // Chromium/Edge/Brave support
     if (dateRef.current?.showPicker) dateRef.current.showPicker();
   };
 
@@ -15,9 +15,9 @@ const SiteVisitForm = () => {
     <Wrapper className='contact-section'>
       <div className='container'>
         <Link className='btn-container' to='/contact'>
-          <button className='back-btn'>go back &rarr;</button>
+          <button className='back-btn'>{t('contact.site_visit.back')}</button>
         </Link>
-        <h2 className='form-title'>Reserve a Site Visit</h2>
+        <h2 className='form-title'>{t('contact.site_visit.title')}</h2>
 
         <form
           className='contact-form'
@@ -34,28 +34,29 @@ const SiteVisitForm = () => {
             <input
               type='text'
               name='fullName'
-              placeholder='FULL NAME*'
+              placeholder={t('contact.site_visit.placeholders.full_name')}
               required
             />
             <input
               type='email'
               name='email'
-              placeholder='EMAIL ADDRESS*'
+              placeholder={t('contact.site_visit.placeholders.email')}
               required
             />
             <input
               type='tel'
               name='phone'
-              placeholder='MOBILE NUMBER*'
+              placeholder={t('contact.site_visit.placeholders.phone')}
               required
+              dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
             />
-
-            {/* Date input — clicking anywhere opens the picker */}
             <input
               ref={dateRef}
               type='date'
               name='date'
+              placeholder={t('contact.site_visit.placeholders.date')}
               required
+              dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
               onClick={openPicker}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
@@ -67,9 +68,13 @@ const SiteVisitForm = () => {
           </div>
 
           <div className='right-fields'>
-            <textarea name='message' placeholder='MESSAGE' rows='15' />
+            <textarea
+              name='message'
+              placeholder={t('contact.site_visit.placeholders.message')}
+              rows='15'
+            />
             <button className='btn' type='submit'>
-              Book Now
+              {t('contact.site_visit.button')}
             </button>
           </div>
         </form>
